@@ -11,11 +11,11 @@ Table of Contents
 	6.	License
 	7.	Acknowledgements
 
-Overview
+## Overview
 
 This web application allows users to upload lung X-ray or CT scan images and receive predictions on the type of lung cancer or whether the image is normal. The project utilizes a pre-trained convolutional neural network (CNN) model that is deployed via a user-friendly Streamlit interface.
 
-Features
+## Features
 	•	Image Upload: Upload lung X-ray or CT scan images (JPEG, PNG, or JPG).
 	•	Prediction: Get predictions with confidence scores.
 	•	Cancer Details: Provides descriptions of the detected cancer type in multiple languages (English, Hindi, Punjabi).
@@ -23,7 +23,7 @@ Features
 	•	Image Augmentation: Apply augmentation techniques like rotation, width/height shift, and zoom for enhancing the dataset.
 	•	Model Architecture: View the model architecture and understand its layers.
 
-Model Details
+## Model Details
 
 The model is a CNN-based deep learning model trained to classify lung cancer into one of the following categories:
 	•	Adenocarcinoma
@@ -31,13 +31,13 @@ The model is a CNN-based deep learning model trained to classify lung cancer int
 	•	Squamous Cell Carcinoma
 	•	Normal
 
-Model Specifications:
+## Model Specifications:
 	•	Framework: TensorFlow 2.x
 	•	Preprocessing: Image resizing to (350, 350), normalization
 	•	Architecture: Deep Convolutional Neural Network
 	•	Final Model: final_model.h5
 
-How to Use
+## How to Use
 
 Prerequisites
 	•	Python 3.x
@@ -78,8 +78,10 @@ The dataset used for training and testing the model is sourced from Kaggle:
 - **Dataset**: [Chest CT Scan Images](https://www.kaggle.com/datasets/mohamedhanyyy/chest-ctscan-images)
 - **Creator**: Mohamed Hanyyy
 - **License**: Please refer to the dataset's license on Kaggle for more information.
-- 
+  
 Ensure you respect the license terms provided by Kaggle when using this dataset.
+### Model File Download
+You can download the trained model from [this link](https://drive.google.com/file/d/1X-umkgZULTcpuHWiwyyCRjEEkIj-BG9d/view?usp=sharing).
 
 License
 
