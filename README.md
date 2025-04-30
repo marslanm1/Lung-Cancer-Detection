@@ -1,5 +1,3 @@
-Here’s a simple template for your README.md file. You can adjust the content according to your needs:
-
 # Lung Cancer Detection with X-Ray/CT Images
 
 This project aims to detect different types of lung cancer from X-ray or CT images using deep learning. The model is based on a Convolutional Neural Network (CNN) and predicts cancer types from uploaded lung X-ray or CT scan images. The project is implemented using **Streamlit** for the web interface and **TensorFlow/Keras** for the model.
