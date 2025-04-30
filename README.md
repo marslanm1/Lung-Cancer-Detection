@@ -1,81 +1,90 @@
-# Lung Cancer Detection with X-Ray/CT Images
+🩺 Lung Cancer Detection from X-ray and CT Images
 
-This project aims to detect different types of lung cancer from X-ray or CT images using deep learning. The model is based on a Convolutional Neural Network (CNN) and predicts cancer types from uploaded lung X-ray or CT scan images. The project is implemented using **Streamlit** for the web interface and **TensorFlow/Keras** for the model.
+This project involves building a deep learning model to predict lung cancer types (Adenocarcinoma, Squamous Cell Carcinoma, Large Cell Carcinoma, and Normal) based on X-ray and CT scan images. The model is built using TensorFlow and Keras, and it is deployed using Streamlit for interactive predictions.
 
-## Key Features
+Table of Contents
+	1.	Overview
+	2.	Features
+	3.	Model Details
+	4.	How to Use
+	5.	Dataset
+	6.	License
+	7.	Acknowledgements
 
-- **Image Upload**: Allows users to upload X-ray or CT images of the lungs.
-- **Prediction**: The model predicts the type of cancer with a confidence score.
-- **Multi-language Support**: The web interface supports multiple languages (English, Hindi, Punjabi).
-- **Image Augmentation**: The app provides an option to apply image augmentation for better model generalization.
-- **Model Architecture**: Option to view the model architecture.
+Overview
 
-## Classes Predicted
+This web application allows users to upload lung X-ray or CT scan images and receive predictions on the type of lung cancer or whether the image is normal. The project utilizes a pre-trained convolutional neural network (CNN) model that is deployed via a user-friendly Streamlit interface.
 
-The model can predict the following classes:
-- **Adenocarcinoma**
-- **Large Cell Carcinoma**
-- **Normal** (No signs of cancer)
-- **Squamous Cell Carcinoma**
+Features
+	•	Image Upload: Upload lung X-ray or CT scan images (JPEG, PNG, or JPG).
+	•	Prediction: Get predictions with confidence scores.
+	•	Cancer Details: Provides descriptions of the detected cancer type in multiple languages (English, Hindi, Punjabi).
+	•	Save Results: Option to download the prediction results in CSV format.
+	•	Image Augmentation: Apply augmentation techniques like rotation, width/height shift, and zoom for enhancing the dataset.
+	•	Model Architecture: View the model architecture and understand its layers.
 
-## Setup
+Model Details
 
-To run this project locally, follow the steps below:
+The model is a CNN-based deep learning model trained to classify lung cancer into one of the following categories:
+	•	Adenocarcinoma
+	•	Large Cell Carcinoma
+	•	Squamous Cell Carcinoma
+	•	Normal
 
-### Prerequisites
-Ensure that you have the following installed on your machine:
-- Python 3.x
-- TensorFlow
-- Keras
-- Streamlit
-- Other dependencies (see `requirements.txt`)
+Model Specifications:
+	•	Framework: TensorFlow 2.x
+	•	Preprocessing: Image resizing to (350, 350), normalization
+	•	Architecture: Deep Convolutional Neural Network
+	•	Final Model: final_model.h5
 
-### Installation
+How to Use
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/marslanm1/Lung-Cancer-Detection.git
-   cd Lung-Cancer-Detection
+Prerequisites
+	•	Python 3.x
+	•	TensorFlow
+	•	Streamlit
+	•	PIL (Python Imaging Library)
+	•	Pandas
+	•	Numpy
+	•	Other necessary libraries
 
-	2.	Install the required packages:
+Installation
+	1.	Clone the repository:
+
+git clone https://github.com/marslanm1/Lung-Cancer-Detection.git
+cd Lung-Cancer-Detection
+
+
+	2.	Install the required dependencies:
 
 pip install -r requirements.txt
 
 
-
-Running the Application
-
-To run the Streamlit app, use the following command:
+	3.	Run the Streamlit app:
 
 streamlit run app.py
 
-This will start the application, and you can open it in your browser.
 
-Model Details
+	4.	Open the app in your browser at http://localhost:8501.
 
-The deep learning model used for prediction is a Convolutional Neural Network (CNN), trained on a dataset of lung X-ray/CT images. The model classifies the images into four categories:
-	1.	Adenocarcinoma
-	2.	Large Cell Carcinoma
-	3.	Normal
-	4.	Squamous Cell Carcinoma
+Upload Image
+	•	Upload an X-ray or CT scan image of the lungs.
+	•	The model will predict the cancer type with a confidence score and display the results.
 
-The model provides a confidence score for its predictions, which indicates the model’s certainty.
+## Dataset
 
-Performance Metrics
-	•	Accuracy: The model’s accuracy on the test set.
-	•	Precision: The precision of the model for each class.
-	•	Recall: The recall of the model for each class.
-	•	F1-Score: The F1-score for each class.
+The dataset used for training and testing the model is sourced from Kaggle:
 
-Example Usage
-	1.	Upload an image: Choose an X-ray or CT image of the lungs.
-	2.	Prediction: Click the “Predict” button to get the cancer type prediction with confidence score.
-	3.	Save the results: You can download the prediction results for further analysis.
+- **Dataset**: [Chest CT Scan Images](https://www.kaggle.com/datasets/mohamedhanyyy/chest-ctscan-images)
+- **Creator**: Mohamed Hanyyy
+- **License**: Please refer to the dataset's license on Kaggle for more information.
+- 
+Ensure you respect the license terms provided by Kaggle when using this dataset.
 
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
-	•	Thanks to TensorFlow and Keras for providing excellent deep learning frameworks.
-	•	Special thanks to the contributors of open-source projects that made this project possible.
+Acknowledgements
+	•	The model is based on convolutional neural networks (CNN) for image classification.
+	•	Special thanks to Kaggle and the dataset creator Mohamed Hanyyy for providing the dataset used in this project.
